@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Study</title>
+</head>
+<body>
+    <h1>Add New Study</h1>
+    <form action="{{ url_for('add_study') }}" method="post">
+        <label for="study_name">Study Name:</label>
+        <input type="text" id="study_name" name="study name" required><br>
+
+        <label for="sponser_name">Sponsor Name:</label>
+        <input type="text" id="sponser_name" name="sponser name" required><br>
+
+        <label for="study_description">Study Description:</label>
+        <textarea id="study_description" name="study description" required></textarea><br>
+
+        <input type="submit" value="Add Study">
+    </form>
+
+    <a href="{{ url_for('index') }}">Back to List</a>
+</body>
+</html>

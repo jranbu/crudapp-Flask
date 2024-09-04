@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Study</title>
+</head>
+<body>
+    <h1>Edit Study</h1>
+    <form action="{{ url_for('edit_user', uid=datas['UID']) }}" method="post">
+        <label for="study_name">Study Name:</label>
+        <input type="text" id="study_name" name="study name" value="{{ datas['STUDYNAME'] }}" required><br>
+
+        <label for="sponser_name">Sponsor Name:</label>
+        <input type="text" id="sponser_name" name="sponser name" value="{{ datas['SPONSERNAME'] }}" required><br>
+
+        <label for="study_description">Study Description:</label>
+        <textarea id="study_description" name="study description" required>{{ datas['STUDYDESCRIPTION'] }}</textarea><br>
+
+        <input type="submit" value="Update Study">
+    </form>
+
+    <a href="{{ url_for('index') }}">Back to List</a>
+</body>
+</html>
